@@ -1,7 +1,5 @@
 package com.liuwq.ext;
 
-import com.liuwq.service.OrderService;
-
 import javax.tools.JavaCompiler;
 import javax.tools.StandardJavaFileManager;
 import javax.tools.ToolProvider;
@@ -41,7 +39,7 @@ public class MyProxy {
             String filename = "d:/code/$Proxy0.java";
             File f = new File(filename);
             FileWriter fw = new FileWriter(f);
-            fw.write(proxyClass);
+            fw.write(proxyClass.toString());
             fw.flush();
             fw.close();
 
